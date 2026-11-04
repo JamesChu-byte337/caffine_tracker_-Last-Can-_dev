@@ -1,0 +1,160 @@
+{
+  "source": "/Users/jameszhu/Desktop/caffine_app_dev/CaffeineTracker/Views/History/HistoryView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "History",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 53
+        }
+      },
+      {
+        "comment": "",
+        "key": "Charts and patterns appear once you've logged some drinks.",
+        "location": {
+          "startingColumn": 109,
+          "startingLine": 36
+        }
+      },
+      {
+        "comment": "",
+        "key": "Period",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 30
+        }
+      },
+      {
+        "comment": "",
+        "key": "No drinks yet",
+        "location": {
+          "startingColumn": 48,
+          "startingLine": 36
+        }
+      },
+      {
+        "comment": "",
+        "key": "Patterns",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 40
+        }
+      },
+      {
+        "comment": "",
+        "key": "Daily caffeine",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 83
+        }
+      },
+      {
+        "comment": "",
+        "key": "Guideline",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 89
+        }
+      },
+      {
+        "comment": "",
+        "key": "Day",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 86
+        }
+      },
+      {
+        "comment": "",
+        "key": "Caffeine",
+        "location": {
+          "startingColumn": 79,
+          "startingLine": 86
+        }
+      },
+      {
+        "comment": "",
+        "key": "400 mg",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 93
+        }
+      },
+      {
+        "comment": "",
+        "key": "Drinks per day",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 103
+        }
+      },
+      {
+        "comment": "",
+        "key": "Day",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 105
+        }
+      },
+      {
+        "comment": "",
+        "key": "Drinks",
+        "location": {
+          "startingColumn": 75,
+          "startingLine": 105
+        }
+      },
+      {
+        "comment": "",
+        "key": "Estimated caffeine at bedtime",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 116
+        }
+      },
+      {
+        "comment": "",
+        "key": "Estimated amount remaining at your bedtime each night, including today's drinks so far.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 126
+        }
+      },
+      {
+        "comment": "",
+        "key": "Day",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 118
+        }
+      },
+      {
+        "comment": "",
+        "key": "Caffeine",
+        "location": {
+          "startingColumn": 76,
+          "startingLine": 118
+        }
+      },
+      {
+        "comment": "",
+        "key": "Day",
+        "location": {
+          "startingColumn": 37,
+          "startingLine": 120
+        }
+      },
+      {
+        "comment": "",
+        "key": "Caffeine",
+        "location": {
+          "startingColumn": 77,
+          "startingLine": 120
+        }
+      }
+    ]
+  },
+  "version": 1
+}

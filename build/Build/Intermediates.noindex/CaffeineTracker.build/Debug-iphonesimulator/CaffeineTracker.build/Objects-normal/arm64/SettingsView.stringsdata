@@ -1,0 +1,424 @@
+{
+  "source": "/Users/jameszhu/Desktop/caffine_app_dev/CaffeineTracker/Views/Settings/SettingsView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Settings",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 41
+        }
+      },
+      {
+        "comment": "",
+        "key": "Sign out?",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 47
+        }
+      },
+      {
+        "comment": "",
+        "key": "Delete all data?",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 52
+        }
+      },
+      {
+        "comment": "",
+        "key": "Developer",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 33
+        }
+      },
+      {
+        "comment": "",
+        "key": "Your profile",
+        "location": {
+          "startingColumn": 17,
+          "startingLine": 63
+        }
+      },
+      {
+        "comment": "",
+        "key": "Display",
+        "location": {
+          "startingColumn": 17,
+          "startingLine": 162
+        }
+      },
+      {
+        "comment": "",
+        "key": "About",
+        "location": {
+          "startingColumn": 17,
+          "startingLine": 171
+        }
+      },
+      {
+        "comment": "",
+        "key": "Delete all data",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 28
+        }
+      },
+      {
+        "comment": "",
+        "key": "Removes your drink log, saved drinks and profile from this device.",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 30
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add 30 days of sample drinks",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 34
+        }
+      },
+      {
+        "comment": "",
+        "key": "Send test notification in 5 seconds",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 35
+        }
+      },
+      {
+        "comment": "",
+        "key": "Sign out",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 48
+        }
+      },
+      {
+        "comment": "",
+        "key": "Your drinks and profile stay on this device.",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 50
+        }
+      },
+      {
+        "comment": "",
+        "key": "Delete everything",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 53
+        }
+      },
+      {
+        "comment": "",
+        "key": "This can't be undone.",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 55
+        }
+      },
+      {
+        "comment": "",
+        "key": "Signed in as",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 65
+        }
+      },
+      {
+        "comment": "",
+        "key": "Age",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 67
+        }
+      },
+      {
+        "comment": "",
+        "key": "Typical bedtime",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 68
+        }
+      },
+      {
+        "comment": "",
+        "key": "My drinks",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 69
+        }
+      },
+      {
+        "comment": "",
+        "key": "Sign out",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 70
+        }
+      },
+      {
+        "comment": "",
+        "key": "Health",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 81
+        }
+      },
+      {
+        "comment": "",
+        "key": "Your caffeine half-life",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 94
+        }
+      },
+      {
+        "comment": "",
+        "key": "Last evaluated",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 96
+        }
+      },
+      {
+        "comment": "",
+        "key": "Re-evaluate",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 98
+        }
+      },
+      {
+        "comment": "",
+        "key": "Estimate",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 100
+        }
+      },
+      {
+        "comment": "",
+        "key": "Half-life is how long it takes for about half of the caffeine to leave your body. It's estimated for you from your age, health conditions and the factors you've entered, using published research. All amounts in this app are estimates.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 102
+        }
+      },
+      {
+        "comment": "",
+        "key": "Use Apple Health data",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 109
+        }
+      },
+      {
+        "comment": "",
+        "key": "Connect Apple Health",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 119
+        }
+      },
+      {
+        "comment": "",
+        "key": "Apple Health",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 123
+        }
+      },
+      {
+        "comment": "",
+        "key": "Heart rate, sleep, height and weight are read and analyzed on this iPhone only. To fully remove access, open the Health app → Sharing → Apps → Last Can.",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 126
+        }
+      },
+      {
+        "comment": "",
+        "key": "Optional. With an Apple Watch or similar device, the app can look for patterns between your caffeine, heart rate and sleep. Data never leaves this iPhone.",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 127
+        }
+      },
+      {
+        "comment": "",
+        "key": "Notify me when the countdown ends",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 136
+        }
+      },
+      {
+        "comment": "",
+        "key": "Countdown threshold",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 134
+        }
+      },
+      {
+        "comment": "",
+        "key": "Countdown",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 151
+        }
+      },
+      {
+        "comment": "",
+        "key": "Notifications are turned off for this app. You can allow them in the iPhone Settings app.",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 154
+        }
+      },
+      {
+        "comment": "",
+        "key": "You'll get: “Caffeine countdown ended. %@”",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 156
+        }
+      },
+      {
+        "comment": "",
+        "key": "Appearance",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 163
+        }
+      },
+      {
+        "comment": "",
+        "key": "Disclaimer",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 172
+        }
+      },
+      {
+        "comment": "",
+        "key": "Daily guideline",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 173
+        }
+      },
+      {
+        "comment": "",
+        "key": "My drinks",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 236
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add drinks you have often so you can pick them quickly.",
+        "location": {
+          "startingColumn": 108,
+          "startingLine": 233
+        }
+      },
+      {
+        "comment": "",
+        "key": "No saved drinks",
+        "location": {
+          "startingColumn": 40,
+          "startingLine": 233
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 238
+        }
+      },
+      {
+        "comment": "",
+        "key": "New drink",
+        "location": {
+          "startingColumn": 45,
+          "startingLine": 269
+        }
+      },
+      {
+        "comment": "",
+        "key": "Edit drink",
+        "location": {
+          "startingColumn": 59,
+          "startingLine": 269
+        }
+      },
+      {
+        "comment": "",
+        "key": "Name",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 260
+        }
+      },
+      {
+        "comment": "",
+        "key": "Caffeine per serving",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 261
+        }
+      },
+      {
+        "comment": "",
+        "key": "Serving size",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 264
+        }
+      },
+      {
+        "comment": "",
+        "key": "mg",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 262
+        }
+      },
+      {
+        "comment": "",
+        "key": "mL (optional)",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 265
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 70,
+          "startingLine": 272
+        }
+      },
+      {
+        "comment": "",
+        "key": "Save",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 274
+        }
+      }
+    ]
+  },
+  "version": 1
+}

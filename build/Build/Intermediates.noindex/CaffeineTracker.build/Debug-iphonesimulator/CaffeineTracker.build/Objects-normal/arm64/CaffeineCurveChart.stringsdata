@@ -1,0 +1,152 @@
+{
+  "source": "/Users/jameszhu/Desktop/caffine_app_dev/CaffeineTracker/Views/Home/CaffeineCurveChart.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "mg (estimate)",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 107
+        }
+      },
+      {
+        "comment": "",
+        "key": "Estimated caffeine curve",
+        "location": {
+          "startingColumn": 29,
+          "startingLine": 108
+        }
+      },
+      {
+        "comment": "",
+        "key": "About %@ now, about %@ at bedtime",
+        "location": {
+          "startingColumn": 29,
+          "startingLine": 109
+        }
+      },
+      {
+        "comment": "",
+        "key": "Threshold",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 68
+        }
+      },
+      {
+        "comment": "",
+        "key": "Now",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 75
+        }
+      },
+      {
+        "comment": "",
+        "key": "Bedtime",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 82
+        }
+      },
+      {
+        "comment": "",
+        "key": "Time",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 54
+        }
+      },
+      {
+        "comment": "",
+        "key": "Caffeine",
+        "location": {
+          "startingColumn": 67,
+          "startingLine": 54
+        }
+      },
+      {
+        "comment": "",
+        "key": "Time",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 58
+        }
+      },
+      {
+        "comment": "",
+        "key": "Caffeine",
+        "location": {
+          "startingColumn": 67,
+          "startingLine": 58
+        }
+      },
+      {
+        "comment": "",
+        "key": "Series",
+        "location": {
+          "startingColumn": 105,
+          "startingLine": 58
+        }
+      },
+      {
+        "comment": "",
+        "key": "Series",
+        "location": {
+          "startingColumn": 49,
+          "startingLine": 59
+        }
+      },
+      {
+        "comment": "",
+        "key": "Time",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 63
+        }
+      },
+      {
+        "comment": "",
+        "key": "Caffeine",
+        "location": {
+          "startingColumn": 67,
+          "startingLine": 63
+        }
+      },
+      {
+        "comment": "",
+        "key": "Series",
+        "location": {
+          "startingColumn": 105,
+          "startingLine": 63
+        }
+      },
+      {
+        "comment": "",
+        "key": "Series",
+        "location": {
+          "startingColumn": 49,
+          "startingLine": 64
+        }
+      },
+      {
+        "comment": "",
+        "key": "Now",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 79
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 62,
+          "startingLine": 103
+        }
+      }
+    ]
+  },
+  "version": 1
+}

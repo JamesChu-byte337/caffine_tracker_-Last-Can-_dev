@@ -1,0 +1,4 @@
+Target dependency graph (2 targets)
+Target 'CaffeineTrackerTests' in project 'CaffeineTracker'
+➜ Explicit dependency on target 'CaffeineTracker' in project 'CaffeineTracker'
+Target 'CaffeineTracker' in project 'CaffeineTracker' (no dependencies)

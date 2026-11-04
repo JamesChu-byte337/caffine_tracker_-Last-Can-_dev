@@ -1,0 +1,104 @@
+{
+  "source": "/Users/jameszhu/Desktop/caffine_app_dev/CaffeineTracker/Views/Settings/ReevaluateHalfLifeView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Re-evaluate half-life",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 36
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 70,
+          "startingLine": 39
+        }
+      },
+      {
+        "comment": "",
+        "key": "Current estimate",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 48
+        }
+      },
+      {
+        "comment": "",
+        "key": "Age",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 49
+        }
+      },
+      {
+        "comment": "",
+        "key": "Re-evaluate",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 57
+        }
+      },
+      {
+        "comment": "",
+        "key": "What it's based on",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 109
+        }
+      },
+      {
+        "comment": "",
+        "key": "Your estimated half-life",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 99
+        }
+      },
+      {
+        "comment": "",
+        "key": "About half of a drink's caffeine is estimated to leave your body in this time.",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 101
+        }
+      },
+      {
+        "comment": "",
+        "key": "None of the known factors apply, so the average is used.",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 112
+        }
+      },
+      {
+        "comment": "",
+        "key": "Average for healthy adults",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 110
+        }
+      },
+      {
+        "comment": "",
+        "key": "Use this estimate",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 125
+        }
+      },
+      {
+        "comment": "",
+        "key": "Genetics also affect half-life but can't be estimated here. This is an estimate, not a medical measurement.",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 132
+        }
+      }
+    ]
+  },
+  "version": 1
+}

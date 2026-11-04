@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>13</integer>
+	<key>logs</key>
+	<dict>
+		<key>04B5A966-8E69-4A8B-9B31-13C11BA18A68</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>04B5A966-8E69-4A8B-9B31-13C11BA18A68.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>CaffeineTracker project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>CaffeineTracker</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Testing project CaffeineTracker with scheme CaffeineTracker</string>
+			<key>timeStartedRecording</key>
+			<real>815381091.22251999</real>
+			<key>timeStoppedRecording</key>
+			<real>815381096.258582</real>
+			<key>title</key>
+			<string>Testing project CaffeineTracker with scheme CaffeineTracker</string>
+			<key>uniqueIdentifier</key>
+			<string>04B5A966-8E69-4A8B-9B31-13C11BA18A68</string>
+		</dict>
+		<key>3EE2D7AA-1AF7-4CCB-AEBC-03DCAD996A6B</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>3EE2D7AA-1AF7-4CCB-AEBC-03DCAD996A6B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>CaffeineTracker project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>CaffeineTracker</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project CaffeineTracker with scheme CaffeineTracker</string>
+			<key>timeStartedRecording</key>
+			<real>815380705.23577297</real>
+			<key>timeStoppedRecording</key>
+			<real>815380708.97389805</real>
+			<key>title</key>
+			<string>Building project CaffeineTracker with scheme CaffeineTracker</string>
+			<key>uniqueIdentifier</key>
+			<string>3EE2D7AA-1AF7-4CCB-AEBC-03DCAD996A6B</string>
+		</dict>
+		<key>6FE8885C-99CB-4485-9E5A-CDA12981BB92</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>6FE8885C-99CB-4485-9E5A-CDA12981BB92.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>CaffeineTracker project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>CaffeineTracker</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Testing project CaffeineTracker with scheme CaffeineTracker</string>
+			<key>timeStartedRecording</key>
+			<real>815380835.65484297</real>
+			<key>timeStoppedRecording</key>
+			<real>815380839.47024202</real>
+			<key>title</key>
+			<string>Testing project CaffeineTracker with scheme CaffeineTracker</string>
+			<key>uniqueIdentifier</key>
+			<string>6FE8885C-99CB-4485-9E5A-CDA12981BB92</string>
+		</dict>
+		<key>A1A4AB84-F052-4437-8AED-5F6066AC8892</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>A1A4AB84-F052-4437-8AED-5F6066AC8892.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>CaffeineTracker project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>CaffeineTracker</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project CaffeineTracker with scheme CaffeineTracker</string>
+			<key>timeStartedRecording</key>
+			<real>815381047.41927302</real>
+			<key>timeStoppedRecording</key>
+			<real>815381058.982409</real>
+			<key>title</key>
+			<string>Building project CaffeineTracker with scheme CaffeineTracker</string>
+			<key>uniqueIdentifier</key>
+			<string>A1A4AB84-F052-4437-8AED-5F6066AC8892</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

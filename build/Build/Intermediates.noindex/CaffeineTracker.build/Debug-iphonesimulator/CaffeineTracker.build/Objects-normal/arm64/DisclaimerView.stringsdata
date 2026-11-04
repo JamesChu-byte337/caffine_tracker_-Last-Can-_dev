@@ -1,0 +1,64 @@
+{
+  "source": "/Users/jameszhu/Desktop/caffine_app_dev/CaffeineTracker/Views/Onboarding/DisclaimerView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Accepted %@.",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 19
+        }
+      },
+      {
+        "comment": "",
+        "key": "Disclaimer",
+        "location": {
+          "startingColumn": 40,
+          "startingLine": 14
+        }
+      },
+      {
+        "comment": "",
+        "key": "Before you start",
+        "location": {
+          "startingColumn": 55,
+          "startingLine": 14
+        }
+      },
+      {
+        "comment": "",
+        "key": "I understand and accept",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 30
+        }
+      },
+      {
+        "comment": "",
+        "key": "This app is for adults 18 and over",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 51
+        }
+      },
+      {
+        "comment": "",
+        "key": "Caffeine guidance for people under 18 is different from the adult guidance this app is built around. If you have questions about caffeine, talk to a parent, guardian or healthcare professional.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 54
+        }
+      },
+      {
+        "comment": "",
+        "key": "I entered my age incorrectly",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 58
+        }
+      }
+    ]
+  },
+  "version": 1
+}

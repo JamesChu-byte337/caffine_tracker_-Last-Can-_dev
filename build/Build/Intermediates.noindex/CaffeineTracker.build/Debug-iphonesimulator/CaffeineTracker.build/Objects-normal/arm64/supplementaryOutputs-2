@@ -1,0 +1,23 @@
+{
+  "/Users/jameszhu/Desktop/caffine_app_dev/CaffeineTracker/Logic/HalfLifeEstimator.swift" : {
+    "const-values" : "/Users/jameszhu/Desktop/caffine_app_dev/build/Build/Intermediates.noindex/CaffeineTracker.build/Debug-iphonesimulator/CaffeineTracker.build/Objects-normal/arm64/HalfLifeEstimator.swiftconstvalues",
+    "dependencies" : "/Users/jameszhu/Desktop/caffine_app_dev/build/Build/Intermediates.noindex/CaffeineTracker.build/Debug-iphonesimulator/CaffeineTracker.build/Objects-normal/arm64/HalfLifeEstimator.d",
+    "diagnostics" : "/Users/jameszhu/Desktop/caffine_app_dev/build/Build/Intermediates.noindex/CaffeineTracker.build/Debug-iphonesimulator/CaffeineTracker.build/Objects-normal/arm64/HalfLifeEstimator.dia",
+    "object" : "/Users/jameszhu/Desktop/caffine_app_dev/build/Build/Intermediates.noindex/CaffeineTracker.build/Debug-iphonesimulator/CaffeineTracker.build/Objects-normal/arm64/HalfLifeEstimator.o",
+    "swift-dependencies" : "/Users/jameszhu/Desktop/caffine_app_dev/build/Build/Intermediates.noindex/CaffeineTracker.build/Debug-iphonesimulator/CaffeineTracker.build/Objects-normal/arm64/HalfLifeEstimator.swiftdeps"
+  },
+  "/Users/jameszhu/Desktop/caffine_app_dev/CaffeineTracker/Logic/HealthAnalyzer.swift" : {
+    "const-values" : "/Users/jameszhu/Desktop/caffine_app_dev/build/Build/Intermediates.noindex/CaffeineTracker.build/Debug-iphonesimulator/CaffeineTracker.build/Objects-normal/arm64/HealthAnalyzer.swiftconstvalues",
+    "dependencies" : "/Users/jameszhu/Desktop/caffine_app_dev/build/Build/Intermediates.noindex/CaffeineTracker.build/Debug-iphonesimulator/CaffeineTracker.build/Objects-normal/arm64/HealthAnalyzer.d",
+    "diagnostics" : "/Users/jameszhu/Desktop/caffine_app_dev/build/Build/Intermediates.noindex/CaffeineTracker.build/Debug-iphonesimulator/CaffeineTracker.build/Objects-normal/arm64/HealthAnalyzer.dia",
+    "object" : "/Users/jameszhu/Desktop/caffine_app_dev/build/Build/Intermediates.noindex/CaffeineTracker.build/Debug-iphonesimulator/CaffeineTracker.build/Objects-normal/arm64/HealthAnalyzer.o",
+    "swift-dependencies" : "/Users/jameszhu/Desktop/caffine_app_dev/build/Build/Intermediates.noindex/CaffeineTracker.build/Debug-iphonesimulator/CaffeineTracker.build/Objects-normal/arm64/HealthAnalyzer.swiftdeps"
+  },
+  "/Users/jameszhu/Desktop/caffine_app_dev/CaffeineTracker/Logic/HealthDataStore.swift" : {
+    "const-values" : "/Users/jameszhu/Desktop/caffine_app_dev/build/Build/Intermediates.noindex/CaffeineTracker.build/Debug-iphonesimulator/CaffeineTracker.build/Objects-normal/arm64/HealthDataStore.swiftconstvalues",
+    "dependencies" : "/Users/jameszhu/Desktop/caffine_app_dev/build/Build/Intermediates.noindex/CaffeineTracker.build/Debug-iphonesimulator/CaffeineTracker.build/Objects-normal/arm64/HealthDataStore.d",
+    "diagnostics" : "/Users/jameszhu/Desktop/caffine_app_dev/build/Build/Intermediates.noindex/CaffeineTracker.build/Debug-iphonesimulator/CaffeineTracker.build/Objects-normal/arm64/HealthDataStore.dia",
+    "object" : "/Users/jameszhu/Desktop/caffine_app_dev/build/Build/Intermediates.noindex/CaffeineTracker.build/Debug-iphonesimulator/CaffeineTracker.build/Objects-normal/arm64/HealthDataStore.o",
+    "swift-dependencies" : "/Users/jameszhu/Desktop/caffine_app_dev/build/Build/Intermediates.noindex/CaffeineTracker.build/Debug-iphonesimulator/CaffeineTracker.build/Objects-normal/arm64/HealthDataStore.swiftdeps"
+  }
+}

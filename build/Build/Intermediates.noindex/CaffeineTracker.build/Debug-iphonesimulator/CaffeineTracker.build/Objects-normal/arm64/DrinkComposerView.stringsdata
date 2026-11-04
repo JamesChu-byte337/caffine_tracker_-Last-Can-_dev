@@ -1,0 +1,232 @@
+{
+  "source": "/Users/jameszhu/Desktop/caffine_app_dev/CaffeineTracker/Views/Drink/DrinkComposerView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Preview a drink",
+        "location": {
+          "startingColumn": 49,
+          "startingLine": 33
+        }
+      },
+      {
+        "comment": "",
+        "key": "Log a drink",
+        "location": {
+          "startingColumn": 69,
+          "startingLine": 33
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 37
+        }
+      },
+      {
+        "comment": "",
+        "key": "Above the daily guideline",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 110
+        }
+      },
+      {
+        "comment": "",
+        "key": "Source",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 59
+        }
+      },
+      {
+        "comment": "",
+        "key": "Different time",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 73
+        }
+      },
+      {
+        "comment": "",
+        "key": "Drink time",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 75
+        }
+      },
+      {
+        "comment": "",
+        "key": "Drink time",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 77
+        }
+      },
+      {
+        "comment": "",
+        "key": "Quantity",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 71
+        }
+      },
+      {
+        "comment": "",
+        "key": "Choose or enter a drink to see how it would change your estimate.",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 85
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 106
+        }
+      },
+      {
+        "comment": "",
+        "key": "Log drink",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 98
+        }
+      },
+      {
+        "comment": "",
+        "key": "Log anyway",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 111
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 112
+        }
+      },
+      {
+        "comment": "",
+        "key": "Logging this would bring your estimated 24-hour total to %@, above Health Canada's 400 mg daily maximum for adults.",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 114
+        }
+      },
+      {
+        "comment": "",
+        "key": "You don't have any saved drinks yet. Scan a label or enter the amount.",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 125
+        }
+      },
+      {
+        "comment": "",
+        "key": "My drinks",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 143
+        }
+      },
+      {
+        "comment": "",
+        "key": "Scan a drink label",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 151
+        }
+      },
+      {
+        "comment": "",
+        "key": "Scan again",
+        "location": {
+          "startingColumn": 73,
+          "startingLine": 151
+        }
+      },
+      {
+        "comment": "",
+        "key": "Drink name (optional)",
+        "location": {
+          "startingColumn": 19,
+          "startingLine": 169
+        }
+      },
+      {
+        "comment": "",
+        "key": "Caffeine per serving",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 170
+        }
+      },
+      {
+        "comment": "",
+        "key": "Save to My drinks",
+        "location": {
+          "startingColumn": 16,
+          "startingLine": 175
+        }
+      },
+      {
+        "comment": "",
+        "key": "Check the detected amount against the label before logging.",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 157
+        }
+      },
+      {
+        "comment": "",
+        "key": "mg",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 171
+        }
+      },
+      {
+        "comment": "",
+        "key": "24-hour total",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 184
+        }
+      },
+      {
+        "comment": "",
+        "key": "Projected curve",
+        "location": {
+          "startingColumn": 29,
+          "startingLine": 196
+        }
+      },
+      {
+        "comment": "",
+        "key": "What if",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 209
+        }
+      },
+      {
+        "comment": "",
+        "key": "Estimates only. Caffeine affects people differently.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 211
+        }
+      }
+    ]
+  },
+  "version": 1
+}
