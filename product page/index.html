@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Last Can · Know what's still in you</title>
+  <meta name="description" content="Last Can shows how much caffeine is likely still in your system, how much will be left at bedtime, and what one more drink would change, before you open it.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Last Can · Know what's still in you before the last can">
+  <meta property="og:description" content="A caffeine tracker for students: see what's left at bedtime and what one more drink would change, before you open it.">
+  <meta property="og:image" content="https://jameschu-byte337.github.io/caffine_tracker_-Last-Can-_dev/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #fbf7f0;
+      --paper-2: #f3ece0;
+      --ink: #1b1712;
+      --ink-2: #5a5147;
+      --ink-3: #8a8075;
+      --line: #e6ddcf;
+      --accent: #c8642a;
+      --accent-ink: #9c4a1a;
+      --gold: #f2b230;
+      --night: #15132a;
+      --night-2: #221f3f;
+      --moon: #c38bff;
+      --violet: #6c63ff;
+      --ok: #2f9e62;
+      --radius: 28px;
+      --display: "Bricolage Grotesque", "Manrope", system-ui, sans-serif;
+      --body: "Manrope", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 17px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    .wrap { width: min(1120px, 100% - 32px); margin-inline: auto; }
+
+    /* Nav */
+    .nav {
+      position: sticky; top: 0; z-index: 20;
+      background: color-mix(in srgb, var(--paper) 86%, transparent);
+      backdrop-filter: saturate(160%) blur(14px);
+      -webkit-backdrop-filter: saturate(160%) blur(14px);
+      border-bottom: 1px solid transparent;
+      transition: border-color .3s;
+    }
+    .nav.scrolled { border-bottom-color: var(--line); }
+    .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--display); font-weight: 800; font-size: 20px; letter-spacing: -0.02em; }
+    .brand img { width: 34px; height: 34px; border-radius: 9px; }
+    .nav-links { display: flex; align-items: center; gap: 28px; font-size: 15px; font-weight: 600; }
+    .nav-links a { text-decoration: none; color: var(--ink-2); }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-links a.btn { color: var(--paper); }
+    .brand, .btn { white-space: nowrap; }
+    .btn .short { display: none; }
+    @media (max-width: 400px) {
+      .btn .long { display: none; }
+      .btn .short { display: inline; }
+    }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      border: 0; border-radius: 999px; cursor: pointer;
+      font: 700 15px/1 var(--body); text-decoration: none;
+      padding: 13px 22px; background: var(--ink); color: var(--paper);
+      transition: transform .15s, background .2s;
+    }
+    .btn:hover { background: var(--accent-ink); transform: translateY(-1px); }
+    .btn.small { padding: 10px 16px; font-size: 14px; }
+
+    /* Hero */
+    .hero { padding: 72px 0 40px; position: relative; }
+    .hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
+    .eyebrow {
+      display: inline-flex; max-width: 100%; align-items: center; gap: 8px;
+      font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--accent-ink); background: #f6e3d3; padding: 7px 12px; border-radius: 999px;
+    }
+    h1, h2, h3 { font-family: var(--display); letter-spacing: -0.035em; margin: 0; }
+    h1 { font-size: clamp(44px, 6.6vw, 84px); line-height: .98; font-weight: 800; margin: 22px 0 22px; }
+    h1 .hl { color: var(--accent); }
+    .lede { font-size: clamp(18px, 2vw, 21px); color: var(--ink-2); max-width: 34ch; margin: 0 0 30px; }
+
+    .signup { display: flex; gap: 10px; flex-wrap: wrap; max-width: 470px; }
+    .signup input {
+      flex: 1 1 220px; min-width: 0;
+      font: 500 16px var(--body); color: var(--ink);
+      padding: 14px 18px; border-radius: 999px;
+      border: 1.5px solid var(--line); background: #fff; outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .signup input:focus { border-color: var(--accent); box-shadow: 0 0 0 4px #c8642a22; }
+    .signup .hp { position: absolute; left: -9999px; }
+    .form-note { font-size: 13px; color: var(--ink-3); margin: 10px 2px 0; }
+    .form-status { font-size: 14px; font-weight: 600; margin: 10px 2px 0; min-height: 1.2em; }
+    .form-status.ok { color: var(--ok); }
+    .form-status.err { color: #b4361f; }
+
+    .hero-visual { position: relative; display: flex; justify-content: center; }
+    .phone {
+      width: min(320px, 78vw); padding: 9px; border-radius: 46px;
+      background: #17140f;
+      box-shadow: 0 2px 0 #3a332a inset, 0 40px 80px -30px #5a3a1c66, 0 18px 36px -18px #0005;
+    }
+    .phone img { border-radius: 38px; width: 100%; height: auto; }
+    .chip {
+      position: absolute; background: #fff; border: 1px solid var(--line);
+      border-radius: 18px; padding: 12px 16px; box-shadow: 0 18px 40px -20px #3b2a1a55;
+      font-size: 13px; color: var(--ink-2); line-height: 1.3;
+    }
+    .chip b { display: block; font-family: var(--display); font-size: 22px; color: var(--ink); letter-spacing: -0.02em; }
+    .chip.a { left: -6%; top: 22%; }
+    .chip.b { right: -4%; bottom: 18%; }
+    .chip .moon { color: var(--moon); }
+
+    /* Section scaffolding */
+    section { padding: 110px 0; }
+    .kicker { font-size: 14px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+    h2 { font-size: clamp(36px, 5vw, 62px); line-height: 1.02; font-weight: 800; }
+    .sub { font-size: clamp(17px, 1.6vw, 20px); color: var(--ink-2); max-width: 46ch; margin: 20px 0 0; }
+    .why {
+      margin-top: 26px; padding: 16px 18px; border-left: 3px solid var(--accent);
+      background: #fff8; border-radius: 0 14px 14px 0; font-size: 15px; color: var(--ink-2); max-width: 46ch;
+    }
+    .why strong { color: var(--ink); }
+    .ticks { list-style: none; padding: 0; margin: 26px 0 0; display: grid; gap: 12px; }
+    .ticks li { display: flex; gap: 12px; align-items: flex-start; font-weight: 600; }
+    .ticks li::before {
+      content: ""; flex: none; width: 22px; height: 22px; margin-top: 2px; border-radius: 50%;
+      background: var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/14px no-repeat;
+    }
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+    .split.flip .split-text { order: 2; }
+    .split .phone { margin-inline: auto; }
+
+    /* Calculator band */
+    .calc { background: var(--night); color: #f4f1ff; padding: 110px 0; position: relative; overflow: hidden; }
+    .calc::before {
+      content: ""; position: absolute; inset: -40% -10% auto auto; width: 620px; height: 620px; border-radius: 50%;
+      background: radial-gradient(closest-side, #6c63ff33, transparent);
+    }
+    .calc .kicker { color: var(--gold); }
+    .calc .sub { color: #c9c4e8; }
+    .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; position: relative; }
+    .calc-card { background: var(--night-2); border: 1px solid #ffffff14; border-radius: var(--radius); padding: 30px; }
+    .field { margin-bottom: 22px; }
+    .field label { display: flex; justify-content: space-between; font-size: 14px; font-weight: 700; color: #c9c4e8; margin-bottom: 10px; }
+    .field label output { color: #fff; }
+    .seg { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; background: #ffffff0d; padding: 5px; border-radius: 14px; }
+    .seg button {
+      border: 0; border-radius: 10px; padding: 10px 4px; cursor: pointer;
+      background: transparent; color: #c9c4e8; font: 700 13px/1.15 var(--body);
+    }
+    .seg button span { display: block; font-weight: 500; font-size: 12px; opacity: .8; }
+    .seg button[aria-pressed="true"] { background: #fff; color: var(--night); }
+    input[type=range] { width: 100%; accent-color: var(--gold); }
+    .result { display: flex; align-items: baseline; gap: 12px; margin-top: 8px; }
+    .result .big { font-family: var(--display); font-size: clamp(56px, 8vw, 88px); font-weight: 800; letter-spacing: -0.04em; color: var(--gold); line-height: 1; }
+    .result .unit { font-size: 15px; color: #c9c4e8; }
+    .meter { height: 10px; border-radius: 99px; background: #ffffff14; overflow: hidden; margin: 18px 0 10px; }
+    .meter i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--gold), var(--accent)); border-radius: 99px; transition: width .5s cubic-bezier(.2,.8,.2,1); }
+    .fine { font-size: 13px; color: #9d97c4; }
+
+    /* Gauge */
+    .gauge-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 34px; box-shadow: 0 30px 60px -40px #3b2a1a55; }
+    .gauge-top { display: flex; justify-content: space-between; align-items: baseline; font-weight: 700; }
+    .gauge-top .val { font-family: var(--display); font-size: 44px; letter-spacing: -0.03em; }
+    .gauge-top .val small { font-size: 18px; color: var(--ink-3); }
+    .bar { position: relative; height: 18px; border-radius: 99px; background: var(--paper-2); margin: 22px 0 12px; overflow: hidden; }
+    .bar i { position: absolute; inset: 0 auto 0 0; width: 0; border-radius: 99px; background: var(--accent); transition: width 1.4s cubic-bezier(.2,.8,.2,1); }
+    .bar .tick { position: absolute; top: 0; bottom: 0; width: 2px; background: #fff; }
+    .legend { display: flex; justify-content: space-between; font-size: 13px; color: var(--ink-3); }
+    .states { display: grid; gap: 10px; margin-top: 26px; }
+    .state { display: flex; gap: 12px; align-items: center; padding: 12px 14px; border-radius: 14px; font-size: 15px; font-weight: 600; }
+    .state .dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+    .state.s1 { background: #f6efe6; } .state.s1 .dot { background: var(--accent); }
+    .state.s2 { background: #fff1dc; } .state.s2 .dot { background: #e48b00; }
+    .state.s3 { background: #fde5df; } .state.s3 .dot { background: #d2361e; }
+
+    /* Insight chips */
+    .insights { display: grid; gap: 12px; margin-top: 28px; }
+    .insight { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 14px 18px; font-weight: 600; display: flex; gap: 12px; align-items: center; }
+    .insight .spark { color: var(--accent); font-size: 18px; }
+
+    /* Privacy */
+    .privacy { background: var(--ink); color: #f6f1e8; }
+    .privacy .kicker { color: var(--gold); }
+    .privacy .sub { color: #c8bfb1; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 54px; }
+    .card { background: #2a241d; border: 1px solid #ffffff12; border-radius: 22px; padding: 26px; }
+    .card h3 { font-size: 22px; margin: 14px 0 8px; letter-spacing: -0.02em; }
+    .card p { margin: 0; color: #c8bfb1; font-size: 15px; }
+    .card .ico { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: #ffffff10; }
+    .card .ico svg { width: 22px; height: 22px; stroke: var(--gold); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .privacy-shot { display: grid; grid-template-columns: .8fr 1.2fr; gap: 64px; align-items: center; }
+
+    /* Waterloo */
+    .waterloo { text-align: center; padding-bottom: 40px; }
+    .waterloo .sub { margin-inline: auto; }
+
+    /* Final CTA */
+    .cta { padding: 90px 0 120px; }
+    .cta-box {
+      background: linear-gradient(135deg, #f8d27a, var(--gold) 45%, #e9902f);
+      border-radius: 36px; padding: clamp(36px, 6vw, 72px); display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center;
+    }
+    .cta-box h2 { font-size: clamp(34px, 4.4vw, 54px); }
+    .cta-box .sub { color: #4a3a22; }
+    .cta-box .signup input { border-color: #ffffffaa; }
+    .cta-box .form-note { color: #5f4a2a; }
+
+    footer { border-top: 1px solid var(--line); padding: 40px 0 56px; font-size: 13px; color: var(--ink-3); }
+    footer .wrap { display: grid; gap: 12px; }
+    footer p { margin: 0; max-width: 80ch; }
+
+    /* Reveal */
+    .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .bar i, .meter i { transition: none; }
+    }
+
+    @media (max-width: 900px) {
+      .hero { padding-top: 40px; }
+      .hero .wrap, .split, .calc-grid, .privacy-shot, .cta-box { grid-template-columns: 1fr; gap: 44px; }
+      .split.flip .split-text { order: 0; }
+      .cards { grid-template-columns: 1fr; }
+      .nav-links a:not(.btn) { display: none; }
+      section, .calc { padding: 76px 0; }
+      .chip.a { left: 0; } .chip.b { right: 0; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="wrap">
+      <a class="brand" href="#top"><img src="assets/icon.png" alt="">Last Can</a>
+      <div class="nav-links">
+        <a href="#what-if">Features</a>
+        <a href="#privacy">Privacy</a>
+        <a class="btn small" href="#join"><span class="long">Get early access</span><span class="short">Join</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">A caffeine tracker for students</span>
+        <h1>Know what's still in you before the <span class="hl">last can</span>.</h1>
+        <p class="lede">Last Can shows how much caffeine is likely still in your system, how much will be left at bedtime, and what one more drink would change, before you open it.</p>
+        <form class="signup" data-signup>
+          <input type="email" name="email" placeholder="you@uwaterloo.ca" required pattern=".+@uwaterloo\.ca" title="Use your @uwaterloo.ca email" aria-label="Your uwaterloo.ca email">
+          <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn" type="submit">Join early access</button>
+        </form>
+        <p class="form-status" role="status" aria-live="polite"></p>
+        <p class="form-note">For University of Waterloo students. We'll only email you about Last Can.</p>
+      </div>
+      <div class="hero-visual">
+        <div class="phone"><img src="assets/screens/today.png" width="598" height="1300" alt="Last Can's Today screen: about 116 mg estimated now, about 102 mg at an 11 PM bedtime, with the day's caffeine curve."></div>
+        <div class="chip a"><span class="moon">●</span> At bedtime<b>≈ 102 mg</b></div>
+        <div class="chip b">Last 24 hours<b>240 / 400 mg</b></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="calc" id="awareness" aria-labelledby="calc-title">
+    <div class="wrap calc-grid">
+      <div class="reveal">
+        <div class="kicker">Why it matters</div>
+        <h2 id="calc-title">The can you had at 4 p.m. is still up at midnight.</h2>
+        <p class="sub">Caffeine leaves slowly. For an average adult, about half of it is still around five hours later. Try it with your own afternoon.</p>
+      </div>
+      <div class="calc-card reveal" id="calculator">
+        <div class="field">
+          <label>Drink</label>
+          <div class="seg" role="group" aria-label="Drink size">
+            <button type="button" data-mg="80" aria-pressed="false">80 mg<span>small can</span></button>
+            <button type="button" data-mg="95" aria-pressed="false">95 mg<span>coffee</span></button>
+            <button type="button" data-mg="160" aria-pressed="true">160 mg<span>large can</span></button>
+            <button type="button" data-mg="200" aria-pressed="false">200 mg<span>strong can</span></button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="drink-time">Had it at <output id="drink-time-out">4:00 p.m.</output></label>
+          <input id="drink-time" type="range" min="480" max="1380" step="15" value="960">
+        </div>
+        <div class="field">
+          <label for="bed-time">Bedtime <output id="bed-time-out">12:00 a.m.</output></label>
+          <input id="bed-time" type="range" min="1260" max="1560" step="15" value="1440">
+        </div>
+        <div class="result"><span class="big" id="calc-mg">53</span><span class="unit">mg estimated<br>still in your system at bedtime</span></div>
+        <div class="meter" aria-hidden="true"><i id="calc-meter"></i></div>
+        <p class="fine" id="calc-note">That's 33% of the drink. Estimate uses the average 5-hour half-life; yours may differ.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="what-if">
+    <div class="wrap split">
+      <div class="split-text reveal">
+        <div class="kicker">What if</div>
+        <h2>See tonight before you drink.</h2>
+        <p class="sub">Pick a drink and Last Can draws how it would change your curve. You get one plain sentence: how much you'd have at bedtime, up from how much now.</p>
+        <ul class="ticks">
+          <li>Projection at your own bedtime, in plain language</li>
+          <li>Your new 24-hour total, shown before you commit</li>
+          <li>Nothing is logged until you decide</li>
+        </ul>
+        <p class="why"><strong>The awareness bit:</strong> the trade-off shows up at the moment you're deciding, not the next morning.</p>
+      </div>
+      <div class="reveal"><div class="phone"><img src="assets/screens/preview.png" width="598" height="1300" loading="lazy" alt="The What if preview: drinking a 160 mg can now would mean about 242 mg at an 11 PM bedtime, up from 102 mg, with a dashed projected curve."></div></div>
+    </div>
+  </section>
+
+  <section style="background: var(--paper-2);">
+    <div class="wrap split flip">
+      <div class="split-text reveal">
+        <div class="kicker">Countdown</div>
+        <h2>A countdown to a calmer night.</h2>
+        <p class="sub">Set a level, say 50 mg, and Last Can counts down to when your estimate drops below it. Log another drink and the timer moves right away. When it ends, you get a notification.</p>
+        <p class="why"><strong>The awareness bit:</strong> "it wore off" becomes a time you can actually see, and plan around.</p>
+      </div>
+      <div class="reveal"><div class="phone"><img src="assets/screens/today_dark.png" width="598" height="1300" loading="lazy" alt="Today screen in dark mode with a countdown: 6 hours 5 minutes until the estimate falls below 50 mg."></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split">
+      <div class="split-text reveal">
+        <div class="kicker">Daily limit</div>
+        <h2>400 mg, always in view.</h2>
+        <p class="sub">Health Canada's daily maximum for healthy adults is 400 mg. Last Can keeps a rolling 24-hour total against it, warns you as you get close, and asks before you log past it.</p>
+        <p class="why"><strong>The awareness bit:</strong> cans, coffee and pre-workout add up quietly. Last Can adds them up out loud.</p>
+      </div>
+      <div class="gauge-card reveal" id="gauge">
+        <div class="gauge-top"><span>Last 24 hours</span><span class="val">240 <small>/ 400 mg</small></span></div>
+        <div class="bar"><i id="gauge-fill"></i><span class="tick" style="left:75%"></span></div>
+        <div class="legend"><span>0</span><span>300</span><span>400 mg</span></div>
+        <div class="states">
+          <div class="state s1"><span class="dot"></span>Under 300 mg: the total, quietly tracked</div>
+          <div class="state s2"><span class="dot"></span>300 mg and up: "You're approaching the daily maximum"</div>
+          <div class="state s3"><span class="dot"></span>Over 400 mg: asks you to confirm before logging</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--paper-2);">
+    <div class="wrap split flip">
+      <div class="split-text reveal">
+        <div class="kicker">History</div>
+        <h2>Patterns you'd never notice on your own.</h2>
+        <p class="sub">Weekly and monthly charts of daily totals, drinks, days over the limit and caffeine at bedtime, plus short notes on what changed.</p>
+        <div class="insights">
+          <div class="insight"><span class="spark">✦</span>You had caffeine after 8 p.m. on 5 days this week.</div>
+          <div class="insight"><span class="spark">✦</span>You went over 400 mg on 1 day this week.</div>
+          <div class="insight"><span class="spark">✦</span>Keep it up! Your caffeine yesterday was 23% lower than the week before.</div>
+        </div>
+      </div>
+      <div class="reveal"><div class="phone"><img src="assets/screens/history.png" width="598" height="1300" loading="lazy" alt="History screen with a weekly bar chart of daily caffeine against the 400 mg line and written patterns."></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split">
+      <div class="split-text reveal">
+        <div class="kicker">Personal half-life</div>
+        <h2>Your half-life, not just the average.</h2>
+        <p class="sub">Some medications, pregnancy, liver health, age and body size all change how fast caffeine clears. Last Can estimates your half-life from published research and shows exactly what it's based on. Re-evaluate any time.</p>
+        <p class="why"><strong>The awareness bit:</strong> the same can doesn't last the same time in everyone.</p>
+      </div>
+      <div class="reveal"><div class="phone"><img src="assets/screens/halflife.png" width="598" height="1300" loading="lazy" alt="Half-life result screen showing an estimated 5 hours and what the estimate is based on."></div></div>
+    </div>
+  </section>
+
+  <section class="privacy" id="privacy">
+    <div class="wrap">
+      <div class="privacy-shot">
+        <div class="reveal"><div class="phone"><img src="assets/screens/privacy.png" width="598" height="1300" loading="lazy" alt="Screen explaining that Health data is analyzed on the phone only and never sent to servers."></div></div>
+        <div class="reveal">
+          <div class="kicker">Privacy</div>
+          <h2>Private by design.</h2>
+          <p class="sub">Your drinks, your health conditions and any health data stay on your phone. There's no account server and nothing to sync.</p>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+          <h3>Stays on your phone</h3>
+          <p>Logs, conditions, weight and height are stored on the device and never sent to us.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg></div>
+          <h3>Health data is optional</h3>
+          <p>Connect Apple Health only if you want to. Last Can then looks for patterns between caffeine, heart rate and sleep, on the device.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 12h6M12 9v6"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <h3>Observations, not diagnoses</h3>
+          <p>Anything worth a closer look comes with a suggestion to talk to a doctor. Last Can never says a drink is safe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="waterloo">
+    <div class="wrap reveal">
+      <div class="kicker">Built for Waterloo</div>
+      <h2>Made for long nights in E7.</h2>
+      <p class="sub">Sign in with your uwaterloo.ca email. Built by students who know what a 2 a.m. problem set feels like.</p>
+    </div>
+  </section>
+
+  <section class="cta" id="join">
+    <div class="wrap">
+      <div class="cta-box reveal">
+        <div>
+          <h2>Be one of the first to try Last Can.</h2>
+          <p class="sub">We're testing with a small group of students. Leave your email and we'll let you know when it's your turn.</p>
+        </div>
+        <div>
+          <form class="signup" data-signup>
+            <input type="email" name="email" placeholder="you@uwaterloo.ca" required pattern=".+@uwaterloo\.ca" title="Use your @uwaterloo.ca email" aria-label="Your uwaterloo.ca email">
+            <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button class="btn" type="submit">Join early access</button>
+          </form>
+          <p class="form-status" role="status" aria-live="polite"></p>
+          <p class="form-note">For University of Waterloo students. No spam, unsubscribe any time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <p><strong>Last Can</strong> provides estimates for tracking purposes only and isn't medical advice. Caffeine affects people differently. If you have a health condition or concern, consult a healthcare professional. If you have severe symptoms, seek medical care right away.</p>
+      <p>Independent student project. Not affiliated with or endorsed by the University of Waterloo. Apple Health is a trademark of Apple Inc.</p>
+      <p>© 2026 Last Can</p>
+    </div>
+  </footer>
+
+  <script>
+    // Paste your form endpoint here (for example https://formspree.io/f/abcdwxyz) to start collecting sign-ups.
+    const SIGNUP_ENDPOINT = "";
+
+    // Nav border once the page scrolls.
+    const nav = document.getElementById("nav");
+    const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    // Fade sections in as they scroll into view.
+    const revealer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          revealer.unobserve(entry.target);
+        }
+      }
+    }, { threshold: 0.15 });
+    document.querySelectorAll(".reveal").forEach((el) => revealer.observe(el));
+
+    // Fill the 400 mg gauge when it comes into view.
+    const gauge = document.getElementById("gauge");
+    new IntersectionObserver((entries, observer) => {
+      if (entries[0].isIntersecting) {
+        document.getElementById("gauge-fill").style.width = (240 / 400 * 100) + "%";
+        observer.disconnect();
+      }
+    }, { threshold: 0.4 }).observe(gauge);
+
+    // Bedtime calculator: dose × 0.5^(hours / 5), the same model the app uses.
+    const HALF_LIFE = 5;
+    let doseMg = 160;
+    const drinkTime = document.getElementById("drink-time");
+    const bedTime = document.getElementById("bed-time");
+    const formatMinutes = (total) => {
+      const minutes = ((total % 1440) + 1440) % 1440;
+      const h = Math.floor(minutes / 60), m = minutes % 60;
+      const suffix = h < 12 ? "a.m." : "p.m.";
+      return `${h % 12 === 0 ? 12 : h % 12}:${String(m).padStart(2, "0")} ${suffix}`;
+    };
+    const updateCalc = () => {
+      const drink = Number(drinkTime.value);
+      const bed = Number(bedTime.value);
+      const hours = Math.max(bed - drink, 0) / 60;
+      const share = Math.pow(0.5, hours / HALF_LIFE);
+      const remaining = doseMg * share;
+      document.getElementById("drink-time-out").textContent = formatMinutes(drink);
+      document.getElementById("bed-time-out").textContent = formatMinutes(bed);
+      document.getElementById("calc-mg").textContent = Math.round(remaining);
+      document.getElementById("calc-meter").style.width = (share * 100) + "%";
+      document.getElementById("calc-note").textContent =
+        `That's ${Math.round(share * 100)}% of the drink, ${hours.toFixed(hours % 1 ? 1 : 0)} hours later. Estimate uses the average 5-hour half-life; yours may differ.`;
+    };
+    document.querySelectorAll(".seg button").forEach((button) => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".seg button").forEach((b) => b.setAttribute("aria-pressed", "false"));
+        button.setAttribute("aria-pressed", "true");
+        doseMg = Number(button.dataset.mg);
+        updateCalc();
+      });
+    });
+    drinkTime.addEventListener("input", updateCalc);
+    bedTime.addEventListener("input", updateCalc);
+    updateCalc();
+
+    // Early-access sign-up.
+    document.querySelectorAll("[data-signup]").forEach((form) => {
+      const status = form.nextElementSibling;
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        status.className = "form-status";
+        if (!SIGNUP_ENDPOINT) {
+          status.textContent = "Sign-ups open very soon. Check back in a few days!";
+          return;
+        }
+        const button = form.querySelector("button");
+        button.disabled = true;
+        try {
+          const response = await fetch(SIGNUP_ENDPOINT, {
+            method: "POST",
+            body: new FormData(form),
+            headers: { Accept: "application/json" },
+          });
+          if (!response.ok) throw new Error(String(response.status));
+          form.reset();
+          status.classList.add("ok");
+          status.textContent = "You're on the list. We'll be in touch.";
+        } catch {
+          status.classList.add("err");
+          status.textContent = "Something went wrong. Please try again.";
+        } finally {
+          button.disabled = false;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
