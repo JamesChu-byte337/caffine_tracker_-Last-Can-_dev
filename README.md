@@ -22,7 +22,7 @@
 </p>
 
 <p align="center">
-  <img src="docs/readme/hero.png" width="900" alt="Three phones showing Last Can: the Today caffeine curve, the What if preview, and weekly History">
+  <img src="docs/readme/hero-v2.png" width="900" alt="Three phones showing Last Can: the Today caffeine curve, the What if preview, and weekly History">
 </p>
 
 ## What it does
@@ -42,7 +42,7 @@ Last Can shows how much caffeine is likely still in your system, how much will b
 
 <table>
   <tr>
-    <td width="42%" align="center"><img src="docs/readme/phone-preview.png" width="260" alt="What if preview screen"></td>
+    <td width="42%" align="center"><img src="docs/readme/phone-preview-v2.png" width="260" alt="What if preview screen"></td>
     <td>
       <h3>See tonight before you drink</h3>
       Pick a drink and the curve redraws with it. You get a plain-language projection at your bedtime and your new 24-hour total. Nothing is logged until you decide.
@@ -53,10 +53,10 @@ Last Can shows how much caffeine is likely still in your system, how much will b
       <h3>A countdown to a calmer night</h3>
       Set a level, say 50 mg, and Last Can counts down to when your estimate falls below it. Log another drink and the timer moves right away. Works in light and dark mode.
     </td>
-    <td width="42%" align="center"><img src="docs/readme/phone-today-dark.png" width="260" alt="Today screen in dark mode with countdown"></td>
+    <td width="42%" align="center"><img src="docs/readme/phone-today-dark-v2.png" width="260" alt="Today screen in dark mode with countdown"></td>
   </tr>
   <tr>
-    <td width="42%" align="center"><img src="docs/readme/phone-today.png" width="260" alt="Today screen with the caffeine curve and 24-hour total"></td>
+    <td width="42%" align="center"><img src="docs/readme/phone-today-v2.png" width="260" alt="Today screen with the caffeine curve and 24-hour total"></td>
     <td>
       <h3>400 mg, always in view</h3>
       A rolling 24-hour total against Health Canada's 400 mg daily maximum for healthy adults. Last Can warns you from 300 mg and asks before you log past 400.
@@ -67,10 +67,10 @@ Last Can shows how much caffeine is likely still in your system, how much will b
       <h3>Patterns you'd miss on your own</h3>
       Weekly and monthly charts of daily totals, drinks, days over the limit and caffeine at bedtime, plus short notes like <i>"You had caffeine after 8 p.m. on 5 days this week."</i>
     </td>
-    <td width="42%" align="center"><img src="docs/readme/phone-history.png" width="260" alt="History screen with weekly chart and patterns"></td>
+    <td width="42%" align="center"><img src="docs/readme/phone-history-v2.png" width="260" alt="History screen with weekly chart and patterns"></td>
   </tr>
   <tr>
-    <td width="42%" align="center"><img src="docs/readme/phone-halflife.png" width="260" alt="Personal half-life result screen"></td>
+    <td width="42%" align="center"><img src="docs/readme/phone-halflife-v2.png" width="260" alt="Personal half-life result screen"></td>
     <td>
       <h3>Your half-life, not just the average</h3>
       Certain medications, pregnancy, liver health, age and body size change how fast caffeine clears. Last Can estimates your half-life from published research and shows what it's based on. Re-evaluate any time.
@@ -81,7 +81,7 @@ Last Can shows how much caffeine is likely still in your system, how much will b
       <h3>Private by design</h3>
       Your drinks, health conditions and any Apple Health data stay on your phone. Nothing is sent to a server. Health insights are optional, run on the device, and are worded as observations, never diagnoses.
     </td>
-    <td width="42%" align="center"><img src="docs/readme/phone-privacy.png" width="260" alt="Apple Health permission screen explaining on-device analysis"></td>
+    <td width="42%" align="center"><img src="docs/readme/phone-privacy-v2.png" width="260" alt="Apple Health permission screen explaining on-device analysis"></td>
   </tr>
 </table>
 
