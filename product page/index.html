@@ -112,12 +112,26 @@
     .form-status.err { color: #b4361f; }
 
     .hero-visual { position: relative; display: flex; justify-content: center; }
+    /* --w is the screen width; a thin metal edge and slim black border wrap it without cropping the screenshot */
     .phone {
-      width: min(320px, 78vw); padding: 9px; border-radius: 46px;
-      background: #17140f;
-      box-shadow: 0 2px 0 #3a332a inset, 0 40px 80px -30px #5a3a1c66, 0 18px 36px -18px #0005;
+      --w: min(306px, 74vw);
+      position: relative;
+      width: calc(var(--w) * 1.056); padding: calc(var(--w) * 0.012);
+      border-radius: calc(var(--w) * 0.163);
+      background: linear-gradient(135deg, #e9e6e1 0%, #a9a49d 30%, #6f6a64 52%, #bdb8b1 74%, #5f5a54 100%);
+      box-shadow: 0 0 0 0.5px #3e3a36, 0 40px 70px -34px #5a3a1c66, 0 18px 30px -18px #0004;
     }
-    .phone img { border-radius: 38px; width: 100%; height: auto; }
+    .phone img {
+      width: 100%; height: auto;
+      border: calc(var(--w) * 0.016) solid #050505;
+      border-radius: calc(var(--w) * 0.151);
+    }
+    /* camera cutout, placed where the screenshots' status bar leaves room for it */
+    .phone::after {
+      content: ""; position: absolute; left: 50%; transform: translateX(-50%);
+      top: calc(var(--w) * 0.055); width: calc(var(--w) * 0.30); height: calc(var(--w) * 0.086);
+      border-radius: 999px; background: #000;
+    }
     .chip {
       position: absolute; background: #fff; border: 1px solid var(--line);
       border-radius: 18px; padding: 12px 16px; box-shadow: 0 18px 40px -20px #3b2a1a55;

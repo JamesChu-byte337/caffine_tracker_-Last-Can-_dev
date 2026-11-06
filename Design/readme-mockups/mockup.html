@@ -3,7 +3,9 @@
   Renders README device mockups. Open with a query string and screenshot with headless Chrome, e.g.
     mockup.html?layout=single&shot=today
     mockup.html?layout=hero
-  Screens are read from ../../product page/screenshots/last-can-<shot>.png.
+  Screens are read from ../../product page/screenshots/last-can-<shot>.png (1260 x 2736).
+  The frame is drawn here (no third-party device artwork): a thin metal band, a slim black
+  border and a camera cutout placed where the screenshots' status bar expects it.
 -->
 <html lang="en">
 <head>
@@ -12,65 +14,56 @@
   :root { --w: 360px; }
   * { box-sizing: border-box; }
   html, body { margin: 0; background: transparent; }
-  body { display: inline-block; padding: 70px 80px 110px; }
+  body { display: inline-block; padding: 60px 70px 100px; }
 
+  /* --w is the screen width; the frame adds a slim border around it so the screenshot is never cropped */
   .device {
+    --edge: calc(var(--w) * 0.012);
+    --border: calc(var(--w) * 0.016);
+    --radius: calc(var(--w) * 0.135);
     position: relative;
-    width: var(--w);
-    aspect-ratio: 1260 / 2736;
-    border-radius: calc(var(--w) * 0.155);
-    padding: calc(var(--w) * 0.022);
-    /* brushed metal edge: light at the top-left, darker at the bottom-right */
-    background:
-      linear-gradient(145deg, #f4f2ef 0%, #c9c5bf 22%, #8f8a83 48%, #d7d3cd 70%, #77726b 100%);
+    width: calc(var(--w) + 2 * (var(--edge) + var(--border)));
+    padding: var(--edge);
+    border-radius: calc(var(--radius) + var(--edge) + var(--border));
+    background: linear-gradient(135deg, #e9e6e1 0%, #a9a49d 30%, #6f6a64 52%, #bdb8b1 74%, #5f5a54 100%);
     box-shadow:
-      0 0 0 1px #5d5853,
-      0 2px 1px -1px #ffffffaa inset,
-      0 60px 80px -40px #3d2a1866,
-      0 30px 40px -24px #2a1d1240,
-      0 8px 14px -8px #00000040;
-  }
-  /* inner ring that reads as the polished chamfer */
-  .device::before {
-    content: ""; position: absolute; inset: calc(var(--w) * 0.008);
-    border-radius: calc(var(--w) * 0.148);
-    box-shadow: 0 0 0 1px #ffffff55 inset, 0 0 0 2px #00000030;
-    pointer-events: none;
+      0 0 0 0.5px #3e3a36,
+      0 50px 70px -36px #3d2a1859,
+      0 24px 34px -22px #2a1d1240,
+      0 6px 10px -6px #00000038;
   }
   .bezel {
-    position: relative; width: 100%; height: 100%;
-    background: #070707; border-radius: calc(var(--w) * 0.135);
-    padding: calc(var(--w) * 0.024);
-    box-shadow: 0 0 0 1px #000 inset;
+    position: relative;
+    padding: var(--border);
+    border-radius: calc(var(--radius) + var(--border));
+    background: #050505;
+    box-shadow: 0 0 0 0.5px #ffffff40;
   }
   .screen {
-    position: relative; width: 100%; height: 100%; overflow: hidden;
-    border-radius: calc(var(--w) * 0.112);
+    position: relative; overflow: hidden;
+    width: var(--w); aspect-ratio: 1260 / 2736;
+    border-radius: var(--radius);
     background: #fff;
   }
-  .screen img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  /* camera cutout */
-  .screen::before {
-    content: ""; position: absolute; z-index: 2; top: 1.35%; left: 50%; transform: translateX(-50%);
-    width: 31%; height: 3.4%; border-radius: 999px; background: #050505;
+  .screen img { width: 100%; height: 100%; display: block; }
+  /* camera cutout, matched to where the status bar leaves room for it */
+  .island {
+    position: absolute; z-index: 2; top: 1.25%; left: 50%; transform: translateX(-50%);
+    width: 30%; height: 3.95%; border-radius: 999px; background: #000;
   }
-  .screen::after {
-    content: ""; position: absolute; z-index: 3; top: calc(1.35% + 0.9%); left: calc(50% + 9%);
-    width: 1.9%; aspect-ratio: 1; border-radius: 50%;
-    background: radial-gradient(circle at 35% 35%, #2f3a55 0%, #0c0f18 60%);
+  .island::after {
+    content: ""; position: absolute; right: 14%; top: 50%; transform: translateY(-50%);
+    height: 34%; aspect-ratio: 1; border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #26304a 0%, #07090f 65%);
   }
-  /* soft glass reflection */
-  .glare {
-    position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 4;
-    background: linear-gradient(115deg, #ffffff1f 0%, #ffffff08 28%, transparent 42%);
-  }
-  .btn { position: absolute; background: linear-gradient(90deg, #6d6862, #b9b4ad 45%, #7c776f); border-radius: 3px; }
-  .btn.l { left: -3px; width: 4px; }
-  .btn.r { right: -3px; width: 4px; }
-  .btn.action { top: 17%; height: 5%; }
-  .btn.up { top: 25%; height: 8.5%; }
-  .btn.down { top: 35.5%; height: 8.5%; }
-  .btn.power { top: 27%; height: 13%; }
+  .btn { position: absolute; width: calc(var(--edge) * 0.9); border-radius: 2px;
+    background: linear-gradient(90deg, #5f5a54, #b3aea7 50%, #6a655f); }
+  .btn.l { left: calc(var(--edge) * -0.7); }
+  .btn.r { right: calc(var(--edge) * -0.7); }
+  .btn.action { top: 18%; height: 4.2%; }
+  .btn.up { top: 25%; height: 7.5%; }
+  .btn.down { top: 34%; height: 7.5%; }
+  .btn.power { top: 27%; height: 11.5%; }
 
   /* hero: three devices on a warm card */
   .hero {
@@ -79,9 +72,9 @@
   }
   .hero .glow { position: absolute; width: 900px; height: 900px; left: 300px; top: 160px; border-radius: 50%;
     background: radial-gradient(closest-side, #ffffffcc, transparent); }
-  .hero .device { position: absolute; --w: 330px; }
-  .hero .d1 { left: 250px; top: 150px; transform: rotate(-7deg); }
-  .hero .d2 { left: 585px; top: 70px; --w: 340px; z-index: 2; }
+  .hero .device { position: absolute; --w: 320px; }
+  .hero .d1 { left: 255px; top: 150px; transform: rotate(-7deg); }
+  .hero .d2 { left: 585px; top: 70px; --w: 330px; z-index: 2; }
   .hero .d3 { left: 920px; top: 150px; transform: rotate(7deg); }
   body.hero-body { padding: 0; }
 </style>
@@ -93,7 +86,7 @@
   const device = (shot, cls = "") => `
     <div class="device ${cls}">
       <span class="btn l action"></span><span class="btn l up"></span><span class="btn l down"></span><span class="btn r power"></span>
-      <div class="bezel"><div class="screen"><img src="${src(shot)}" alt=""><div class="glare"></div></div></div>
+      <div class="bezel"><div class="screen"><img src="${src(shot)}" alt=""><span class="island"></span></div></div>
     </div>`;
   if (params.get("layout") === "hero") {
     document.body.classList.add("hero-body");
