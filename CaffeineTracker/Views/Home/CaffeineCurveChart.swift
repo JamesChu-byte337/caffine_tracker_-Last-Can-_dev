@@ -75,14 +75,14 @@ struct CaffeineCurveChart: View {
             RuleMark(x: .value("Now", now))
                 .foregroundStyle(.primary.opacity(0.5))
                 .lineStyle(StrokeStyle(lineWidth: 1))
-                .annotation(position: .top, spacing: 2) {
+                .annotation(position: .top, alignment: .trailing, spacing: 2) {
                     Text("Now").font(.caption2.bold()).foregroundStyle(.secondary)
                 }
 
             RuleMark(x: .value("Bedtime", bedtime))
                 .foregroundStyle(Theme.bedtime.opacity(0.8))
                 .lineStyle(StrokeStyle(lineWidth: 1.5, dash: [4, 3]))
-                .annotation(position: .top, spacing: 2) {
+                .annotation(position: .top, alignment: .leading, spacing: 2) {
                     Image(systemName: "moon.fill").font(.caption2).foregroundStyle(Theme.bedtime)
                 }
         }

@@ -19,6 +19,17 @@ struct CaffeineTrackerApp: App {
         }
     }()
 
+    init() {
+        #if DEBUG
+        if ProcessInfo.processInfo.arguments.contains(SampleData.launchArgument) {
+            let context = ModelContext(container)
+            if ((try? context.fetchCount(FetchDescriptor<DrinkEntry>())) ?? 0) == 0 {
+                SampleData.insert(into: context)
+            }
+        }
+        #endif
+    }
+
     var body: some Scene {
         WindowGroup {
             RootView()
